@@ -799,7 +799,7 @@ textarea.w-select {
 @media screen and (max-width: 991px) {
   .w-container {
     max-width: 728px;
-  }
+ }
 
   .w-hidden-main {
     display: inherit !important;
@@ -879,6 +879,18 @@ textarea.w-select {
     margin-left: 0;
     margin-right: 0;
   }
+  /* media queries changes, really had it here */
+  .d_head{
+    font-size: 20px;
+  }
+  #d_body{
+    font-size: 15px;
+    width: 300px;
+  }
+  #d_logo{
+    width: 50px;
+  }
+
 
   .w-col {
     width: 100%;
