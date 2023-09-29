@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html
-  data-wf-page="6460aa9aee128df08971e741"
-  data-wf-site="64593b188ebcb94009da1931"
+  lang="en"
 >
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <html data-wf-page="6460aa9aee128df08971e741" data-wf-site="64593b188ebcb94009da1931">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>RoyFolio | Royal Portfolio</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -12,7 +16,7 @@
       href="style.css"
       rel="stylesheet"
       type="text/css"
-    />
+    /> 
     <script type="text/javascript">
       !(function (o, c) {
         var n = c.documentElement,
@@ -1107,13 +1111,19 @@
                               </div>
                               <div class="projects-tag-list">
                                 <div class="projects-tag-item">
-                                  <div>HTML</div>
-                                </div>
-                                <div class="projects-tag-item">
-                                  <div>CSS</div>
+                                  <div>React - Vite</div>
                                 </div>
                                 <div class="projects-tag-item">
                                   <div>Javascript</div>
+                                </div>
+                                <div class="projects-tag-item">
+                                  <div>TS</div>
+                                </div>
+                                <div class="projects-tag-item">
+                                  <div>Css</div>
+                                </div>
+                                <div class="projects-tag-item">
+                                  <div>Jsx</div>
                                 </div>
                               </div>
                               <div class="projects-button-wrapper">
@@ -1706,14 +1716,14 @@
                     </div>
                   </div>
                   <div
-                    data-w-id="e083816f-bae2-0538-8d7d-059d1fd9c820"
                     class="contact-form-block w-form"
                   >
                     <form
                       method="get"
+                      id="contact-form"
                     >
                       <div class="form-field-wrapper">
-                        <label for="Contact-5-Name" class="field-label"
+                        <label for="" class="field-label"
                           >Name</label
                         >
                         <div class="form-input-wrapper">
@@ -1722,7 +1732,6 @@
                             class="form-input w-input"
                             maxlength="256"
                             name="Name"
-                            data-name="Name"
                             placeholder=""
                             id="name"
                             required
@@ -1742,7 +1751,7 @@
                         </div>
                       </div>
                       <div class="form-field-wrapper">
-                        <label for="Contact-5-Email" class="field-label"
+                        <label for="" class="field-label"
                         style="margin-top: 30px;"
                           >Email</label
                         >
@@ -1752,10 +1761,9 @@
                             class="form-input w-input"
                             maxlength="256"
                             name="Email"
-                            data-name="Email"
                             placeholder=""
                             id="email"
-                            required=""
+                            required
                           />
                           <div
                             class="absolute-border-left neon-shadow-effect"
@@ -1772,7 +1780,7 @@
                         </div>
                       </div>
                       <div class="form-field-wrapper">
-                        <label for="Contact-5-Message" class="field-label"
+                        <label for="" class="field-label"
                         style="margin-top: 30px;"
                           >Message</label
                         >
@@ -1781,7 +1789,6 @@
                             id="message"
                             name="Message"
                             maxlength="5000"
-                            data-name="Message"
                             placeholder=""
                             required
                             class="form-input text-area w-input"
@@ -1900,7 +1907,7 @@
                           </svg></div>
                       </a> -->
                         <a
-                        href="#"
+                        href="https://github.com/coderroy05"
                         target="_blank"
                         class="footer-social-link w-inline-block"
                         ><div class="footer-social-icon w-embed">
@@ -2025,6 +2032,9 @@
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
 
+
+
+        <!-- submission approved but without clearing form >>>>
     <script>
         var btn = document.getElementById('btn');
         btn.addEventListener('click',function(e){
@@ -2044,6 +2054,69 @@
                 message => alert('Message sent! Thank you for reaching out.')
             );
         })
+    </script> -->
+
+
+      
+    
+    <!-- Submission Approved also with form cleared afterwards<< but submission occur even when input is empty
+    <script>
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var body = 'name: ' + name + '<br/> email: ' + email + '<br/> message: ' + message;
+
+    Email.send({
+        SecureToken: "1f0db6b4-3c5b-4caa-b10a-7fb6e72c76b8",
+        To: 'royalalawode@gmail.com',
+        From: "royalalawode@gmail.com",
+        Subject: "contact message",
+        Body: body
+    }).then(function (message) {
+        alert('Message sent! Thank you for reaching out.');
+        
+        // Clear the form fields
+        document.getElementById('contact-form').reset();
+    });
+    });
+    </script> -->
+
+
+    <script>
+      var btn = document.getElementById('btn');
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Get the values from the form fields
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+        // Check if any of the required fields are empty
+      if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert('Please fill out all required fields before submitting.');
+        return; // Exit the function and do not proceed with sending
+      }
+
+        // Create the email body
+      var body = 'name: ' + name + '<br/> email: ' + email + '<br/> message: ' + message;
+
+      Email.send({
+          SecureToken: "1f0db6b4-3c5b-4caa-b10a-7fb6e72c76b8",
+          To: 'royalalawode@gmail.com',
+          From: "royalalawode@gmail.com",
+          Subject: "contact message",
+          Body: body
+      }).then(function (message) {
+        alert('Message sent! Thank you for reaching out.');
+
+          // Clear the form fields
+        document.getElementById('contact-form').reset();
+        });
+      });
     </script>
         
   </body>
