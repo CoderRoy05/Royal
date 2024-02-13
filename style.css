@@ -22,7 +22,7 @@ body {
   z-index: 9999;
 }
 .preloader img {
-    width: 60%; /* Adjust size as needed */
+    width: 80%; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
 }
   /* EnD! */
