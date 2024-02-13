@@ -18926,6 +18926,17 @@ Webflow.require("ix2").init({
     ],
   },
 });
+
+    // preloader 
+  // Simulate content loading delay (replace this with your actual content loading logic)
+  $(window).on('load', function() {
+      setTimeout(function() {
+          $('.preloader').fadeOut('slow');
+          $('#content').fadeIn('slow');
+      }, 2000); // Change 2000 to the time it takes to load your content
+  });
+  // preloader 
+
 $(document).ready(function() {
          $(".w-webflow-badge").removeClass("w-webflow").empty();
          });
