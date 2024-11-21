@@ -9,7 +9,7 @@ body {
 }
 
 /* Preloader styles */
-.preloader {
+/* .preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,9 +22,9 @@ body {
   z-index: 9999;
 }
 .preloader img {
-    width: 80%; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-}
+    width: 80%;
+    height: auto; 
+} */
   /* EnD! */
 
   /* grey filter pic  */
